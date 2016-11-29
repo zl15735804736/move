@@ -1,0 +1,222 @@
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+    font-family:"微软雅黑";
+    cursor: pointer;
+}
+a:hover{
+    color:#67CBFF;
+}
+/*头部*/
+header{
+    width:100%;
+    height:60px;
+    background:#168bd8;
+    position: fixed;
+    top:0;left:0;
+    z-index: 3;
+}
+.header{
+    width:1000px;
+    height:100%;
+    display:flex;
+    margin: 0 auto;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+    width:120px;
+    height:40px;
+    background:url(../img/logo.png) no-repeat 0 0;
+    margin-top:10px;
+}
+.left{
+    margin-bottom: 5px;
+    font-size:15px;
+    align-self:flex-end;
+}
+.right{
+    margin-bottom: 8px;
+    font-size:12px;
+    align-self:flex-end;
+}
+.header a:nth-child(2){
+    margin-left: 50px;
+}
+.header a:nth-child(5){
+    margin-left: 150px;
+}
+.header a:nth-child(8){
+    color: #FFDA28;
+}
+
+#fullpage{
+    width:100%;
+    height:100%;
+    /*background: red;*/
+}
+section{
+    width:100%;height:100%;
+    position: relative;
+}
+section:nth-child(1){
+    background: url(../img/bg1.jpg) no-repeat;
+}
+section:nth-child(2){
+    background: url(../img/bg2.jpg) no-repeat;
+}
+section:nth-child(3){
+    background: url(../img/bg3.jpg) no-repeat;
+}
+section:nth-child(4){
+    background: url(../img/bg4.jpg) no-repeat;
+}
+.chuan{
+    width: 242px;
+    height: 228px;
+    background: url(../img/ship_1ad6734.png);
+    position: absolute;
+    left: 300px;
+    top: 325px;
+}
+.follow-head {
+    width:100%;
+    height: 126px;
+    background: #0d71cd url(../img/follow-head.jpg);
+    position: absolute;
+    bottom: 0px;left: 0;
+    opacity: 0.5;
+}
+.launch{
+    width: 501px;
+    height: 158px;
+    background: url(../img/launch_deea86c.png);
+    position: absolute;
+    left: 180px;top: 110px;
+}
+.hill-1 {
+    width: 265px;
+    height: 175px;
+    background: url(../img/hill_1_0d79217.png);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.hill-2 {
+    width: 63px;
+    height: 78px;
+    background: url(../img/hill_2_540422f.png);
+    position: absolute;
+    right: 450px;
+    bottom: 60px;
+}
+.hill-3 {
+    width: 260px;
+    height: 175px;
+    background: url(../img/hill_3_ace39fb.png);
+    position: absolute;
+    right: 100px;
+    bottom: 0px;
+}
+.btn-arrow {
+    display: block;
+    width: 30px;
+    height: 26px;
+    background: url(../img/arrow_aad9b25.png);
+    position: absolute;
+    left: 666px;
+    bottom: 42px;
+}
+
+section:nth-child(2) .title {
+    position: absolute;
+    left: 220px;
+    top: 220px;
+    font-family: 'Microsoft Yahei';
+    color: #fff;
+    width: 500px;
+}
+section:nth-child(2) .title h3 {
+    width: 66px;
+    height: 126px;
+    text-indent: -9999em;
+    float: left;
+    background: url(../img/h_lingxian_221f2d8.png) no-repeat;
+}
+.title .text {
+    margin-left: 86px;
+    margin-top: 8px;
+}
+.title .text p {
+    font-size: 19px;
+    letter-spacing: 1px;
+    line-height: 32px;
+    opacity: .8;
+}
+section:nth-child(2) .brain {
+    width: 444px;
+    height: 427px;
+    background: url(../img/brain_36a156f.png);
+    position: absolute;
+    right: 144px;
+    bottom: 90px;
+}
+
+section:nth-child(3) .title {
+    position: absolute;
+    left: 220px;
+    top: 220px;
+    font-family: 'Microsoft Yahei';
+    color: #fff;
+    width: 500px;
+}
+section:nth-child(3) .title h3 {
+    width: 66px;
+    height: 126px;
+    text-indent: -9999em;
+    float: left;
+    background: url(../img/h_quanmian_8f813d2.png);
+}
+
+section:nth-child(3) .brain {
+    width: 444px;
+    height: 427px;
+    background: url(../img/allside_e8abd12.png) no-repeat;
+    position: absolute;
+    right: 144px;
+    bottom: 90px;
+}
+
+
+section:nth-child(4) .title {
+    position: absolute;
+    left: 220px;
+    top: 220px;
+    font-family: 'Microsoft Yahei';
+    color: #fff;
+    width: 500px;
+}
+section:nth-child(4) .title h3 {
+    width: 66px;
+    height: 126px;
+    text-indent: -9999em;
+    float: left;
+    background: url(../img/h4.png);
+}
+
+section:nth-child(4) .brain {
+    width: 444px;
+    height: 427px;
+    background: url(../img/h4s.png) no-repeat;
+    position: absolute;
+    right: 144px;
+    bottom: 90px;
+}
