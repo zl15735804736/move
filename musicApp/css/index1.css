@@ -77,6 +77,13 @@ html,body,ul,li{
 .con{
 	margin-top: 2.3rem;
 }
+.con .titTex{
+	height: 0.5rem;
+    padding: 0 4%;
+    margin: 2.5% 0;
+    font: 0.32rem "微软雅黑";
+    color: #46b4e6;
+}
 .con .newMus{
 	width: 100%;
     padding: 0 3%;
@@ -107,7 +114,16 @@ html,body,ul,li{
     height: 0.86rem;
     margin: 0;padding:0.1rem 0 0 0;
 }
-
+.newMus-list .hotBox{
+	display: block;
+	float: left;
+	color: #333;
+	width: 1.88rem;height: 0.54rem;
+	border: 1px solid #8bd0f8;
+	font: 0.32rem/0.54rem "微软雅黑";
+	text-align: center;
+	margin: 0 0 0.12rem 0.36rem;
+}
 
 
 .footer{
