@@ -1,0 +1,157 @@
+html,body,ul,li{
+    padding:0;margin: 0;
+    border: 0;
+    font-family:Helvetica;
+}
+*{
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+.search{
+	overflow: hidden;
+}
+.search .search-head{
+	height: 1rem;
+	padding:0 0.3rem;
+	background: #ededed;
+}
+.search-head a{
+	display: block;float: left;
+	width:0.6rem;height: 0.6rem;
+	margin:0.2rem 0.2rem 0 0;
+}
+.search-head a img{
+	width:0.6rem;height: 0.6rem;float: left;
+}
+.search-head span{
+	font: 0.32rem/1rem "微软雅黑";
+	float: left;
+	color: #010101;
+	font-weight: bold;
+}
+
+.search-con{
+	height: 9.6rem;
+	margin: 0 auto;
+	padding: 0 0.3rem;
+}
+.search-con .searchBox{
+	height: 0.64rem;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0.3rem;
+}
+.seaInput{
+	width: 79%;
+    height: 0.6rem;
+    border: 0.02rem solid #a0a0a0;
+    border-radius: 3px;
+    background: #fff;
+    float: left;margin: 0;
+}
+.inputs{
+    width: 94%;
+    height: 0.5rem;
+    border: 0;
+    display: block;
+    overflow: hidden;
+    font: 0.28rem/0.6rem "微软雅黑";
+    padding: 0 3%;
+}
+.seaBtn {
+    width: 1rem;
+    height: 0.64rem;
+    background: #46b4e6;
+    font: 0.28rem/0.64rem "微软雅黑";
+    color: #fff;
+    border-radius: 3px;
+    float: right;
+    text-align: center;
+}
+.searchCov{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 0.5rem;
+}
+.searchCov-left{
+	width: 45%;
+    overflow: hidden;
+    float: left;
+    text-align: right;
+    font: 0.28rem/0.7rem "微软雅黑";
+}
+.searchCov-right{
+	width: 45%;
+    overflow: hidden;
+    float: right;
+    text-align: left;
+    font: 0.3rem/0.7rem "微软雅黑";
+}
+.searchCov a{
+	color: #000;
+	display: block;
+}
+
+
+.footer{
+	height: 0.96rem;
+	width: 100%;
+	padding: 0 3%;
+    background: #46b4e6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+.footer img{
+	float: left;
+}
+.footer .mrimg{
+	width: 0.7rem;
+    height: 0.7rem;
+    float: left;
+    overflow: hidden;
+    margin: .12rem .2rem 0 0;
+}
+.footer .musicTex{
+	float: left;
+	overflow: hidden;margin: 0;
+	width: 35%;height: 0.72rem;
+}
+.musicTex .msTop{
+    width: 100%;
+    height: 0.5rem;
+    font: .24rem/ 0.6rem "微软雅黑";
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.musicTex .msBot{
+    width: 100%;
+    height: 0.22rem;margin-top: 0.02rem;
+    font: .24rem/ 0.20rem "微软雅黑";
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.footer .play{
+	width: 0.6rem;
+    height: 0.6rem;
+    float: right;
+    overflow: hidden;
+    margin-top: .2rem;
+}
+.footer .next{
+	width: 0.5rem;
+    height: 0.5rem;
+    float: right;
+    overflow: hidden;
+    margin-top: .24rem;
+    margin-left: .64rem;
+}

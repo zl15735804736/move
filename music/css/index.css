@@ -1,0 +1,209 @@
+html,body,ul,li{
+    padding:0;margin: 0;
+    border: 0;
+    font-family:Helvetica;
+    background: none;
+}
+*{
+	list-style: none;
+	text-decoration: none;
+}
+
+.main{
+	min-width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.header{
+	height: 0.99rem;
+    background: #ededed;
+    overflow: hidden;
+    padding: 0 4%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+.logo{
+	width: 1.8rem;
+    height: 0.68rem;
+    float: left;
+    overflow: hidden;
+    font-size: 0.4rem;
+    line-height: 0.68rem;
+    margin: .2rem 4% 0 0;
+}
+.header .seach{
+	display: block;
+	float: right;
+	width: 0.42rem;
+	height: 0.42rem;
+	overflow: hidden;
+    margin-top: .3rem;
+}
+.header .seach img{
+	display: block;
+	width: 0.42rem;
+	height: 0.42rem;
+}
+.nav-box{
+	width: 100%;
+	height: 0.88rem;
+	background: #46b4e6;
+    overflow: hidden;
+    position: fixed;
+    top: 0.99rem;
+    z-index: 99;
+}
+.nav{
+	display: flex;
+    justify-content: space-around;
+}
+.nav a{
+	width: 14%;
+    height: 0.5rem;
+    font-size: 0.36rem;
+    color: #fff;
+    float: left;
+    margin: .2rem 0 0 0;
+    text-align: center;
+}
+.nav a.def {
+    border-bottom: 1px solid #fff;
+}
+
+
+.con .titTex{
+	height: 0.5rem;
+    padding: 0 4%;
+    margin: 2.5% 0;
+    font: 0.32rem "微软雅黑";
+    color: #46b4e6;
+}
+.newMus{
+	width: 100%;
+    padding: 0 3%;
+    overflow: hidden;
+    position: relative;
+}
+.newMus .newMus-list,.newMus .newMus-list2{
+	display: flex;
+    justify-content: space-around;
+}
+.newMus .ts{
+	margin-bottom: 0.3rem;
+}
+.newMus .newMus-list img{
+	width: 1.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+.newMus .newMus-list2 img{
+	width: 100%;
+    overflow: hidden;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+.newMus-list .list1{
+	padding: 0 0.28rem;
+}
+.newMus .newMus-list2 .list2{
+	width: 42%;
+    height: 100% overflow:hidden;
+    position: relative;
+    float: left;
+}
+.newMus-list2 .list2 .playmv{
+	width: 0.52rem;height: 0.52rem;
+	position: absolute;
+	top: 25%;left: 44%;
+}
+.newMus-list2 .list2 .playmv img{
+	width: 0.52rem;height: 0.52rem;
+}
+.newMus-list .list1 .mustit,.newMus-list2 .list2 .mustit{
+	width: 100%;
+    overflow: hidden;
+    font: 0.32rem/0.4rem "微软雅黑";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 0.86rem;text-align: center;
+    margin: 0;padding:0.1rem 0 0 0;
+}
+
+.newMus-list .hotBox{
+	display: block;
+	float: left;
+	color: #333;
+	width: 1.88rem;height: 0.54rem;
+	border: 1px solid #8bd0f8;
+	font: 0.32rem/0.54rem "微软雅黑";
+	text-align: center;
+	margin: 0 0 0.12rem 0;
+}
+
+
+.footer{
+	height: 0.96rem;
+	width: 100%;
+	padding: 0 3%;
+    background: #46b4e6;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+.footer .mrimg{
+	width: 0.7rem;
+    height: 0.7rem;
+    float: left;
+    overflow: hidden;
+    margin: .12rem .2rem 0 0;
+}
+.footer .musicTex{
+	float: left;
+	overflow: hidden;
+	width: 35%;height: 0.72rem;
+}
+.musicTex .msTop{
+    width: 100%;
+    height: 0.5rem;
+    font: .24rem/ 0.6rem "微软雅黑";
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.musicTex .msBot{
+    width: 100%;
+    height: 0.22rem;margin-top: 0.02rem;
+    font: .24rem/ 0.20rem "微软雅黑";
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.footer .play{
+	width: 0.6rem;
+    height: 0.6rem;
+    float: right;
+    overflow: hidden;
+    margin-top: .2rem;
+}
+.footer .next{
+	width: 0.5rem;
+    height: 0.5rem;
+    float: right;
+    overflow: hidden;
+    margin-top: .24rem;
+    margin-left: .64rem;
+}
+
+
