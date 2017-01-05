@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../public/css/mui.min.css">
+    <script src="../public/js/angular/angular.js"></script>
+    <script src="../public/js/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="../public/js/mui.min.js"></script>
+    <script src="../public/js/angular-animate/angular-animate.js"></script>
+    <script src="controllers.js"></script>
+    <script src="sevices.js"></script>
+    <title>Document</title>
+    <style>
+        .view-animate {
+            transition:left ease 2s;
+        }
+        .view-animate.ng-enter, .view-animate.ng-leave {
+            width:100%;
+            position:absolute;
+            left:0;
+        }
+        .view-animate.ng-enter {
+            left:100%;
+        }
+        .view-animate.ng-enter.ng-enter-active {
+            left:0;
+        }
+        .view-animate.ng-leave.ng-leave-active {
+            left:-100%;
+        }
+    </style>
+</head>
+<body ng-app='myapp'>
+
+    <div ng-view class="view-animate"></div>
+
+</body>
+</html>
