@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;margin: 0;
+        }
+        canvas{
+            background: #CCC;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas=document.querySelector("canvas");
+            var cobj=canvas.getContext("2d");
+            var img=document.querySelector("img");
+            cobj.drawImage(img,0,0,200,200);
+            var dataObj=cobj.getImageData(0,0,200,200);
+            cobj.putImageData(dataObj,200,0);
+
+            var width=200,height=200;
+            var num=50;
+            var w=width/num;
+            var h=height/num;
+            for(var i=0;i<num;i++){
+                for(var j=0;j<num;j++){
+                    var dataObj=cobj.getImageData(j*w,i*h,w,h);
+                    var r=0;g=0;b=0;
+                    for(var k=0;k<dataObj.width*dataObj.height;k++){
+                        r+=dataObj.data[k*4+0];
+                        g+=dataObj.data[k*4+1];
+                        b+=dataObj.data[k*4+2];
+                    }
+                    r=parseInt(r/(dataObj.width*dataObj.height));
+                    g=parseInt(g/(dataObj.width*dataObj.height));
+                    b=parseInt(b/(dataObj.width*dataObj.height));
+                    for(var k=0;k<dataObj.width*dataObj.height;k++){
+                        dataObj.data[k*4+0]=r;
+                        dataObj.data[k*4+1]=g;
+                        dataObj.data[k*4+2]=b;
+                    }
+                    cobj.putImageData(dataObj,200+j*w,0+i*h);
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<canvas width="600" height="600"></canvas>
+<img src="img/1.PNG" alt="" hidden>
+</body>
+</html>

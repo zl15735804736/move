@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas{
+            background: #ccc;
+        }
+    </style>
+    <script>
+        window.onload=function () {
+            var canvas=document.getElementsByTagName("canvas")[0];
+            var cobj=canvas.getContext("2d");
+//            var x=5,y=5;
+//            setInterval(function(){
+//                x++;
+//                y++;
+//                cobj.clearRect(0,0,600,600);
+//                cobj.save();
+//                cobj.translate(x,y);
+//                cobj.fillRect(0,0,100,100);
+//                cobj.restore();
+//            },50)
+//            cobj.translate(100,100);
+//            cobj.rotate(Math.PI/4);
+//            cobj.fillRect(0,0,100,100);
+
+//      面向对象
+            function lizi(){
+                this.x=0;
+                this.y=0;
+                this.r=5+3*Math.random();
+                this.color="#fff";
+//                rgb("+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+","+parseInt(Math.random()*255)+")
+                this.speedx=3*Math.random()+3;
+                this.speedy=-5;
+                this.zhongli=0.5;
+                this.speedr=0.1;
+            }
+
+            lizi.prototype={
+                draw:function(){
+                    cobj.save();
+                    cobj.beginPath();
+                    cobj.translate(this.x,this.y);
+                    cobj.fillStyle=this.color;
+                    cobj.arc(200,200,this.r,0,2*Math.PI);
+                    cobj.fill();
+                    cobj.restore();
+                },
+                update:function(){
+                    this.x+=this.speedx;
+                    this.y+=this.speedy;
+                    this.speedy+=this.zhongli;
+                    this.r-=this.speedr;
+                }
+            }
+
+
+            var arr=[];
+            setInterval(function(){
+                cobj.clearRect(0,0,600,600);
+                arr.push(new lizi());
+                for(var i=0;i<arr.length;i++){
+                    arr[i].draw();
+                    arr[i].update();
+                    if(arr[i].r<0){
+                        arr[i]=new lizi();
+                    }
+                }
+                if(arr.length>200){
+                    arr.shift();
+                }
+            },50)
+
+//      火焰
+            function fire(){
+                this.x=180;
+                this.y=180;
+                this.r=5+3*Math.random();
+                this.speedy=3+Math.random()*3;
+                this.speedr=0.1;
+                this.life=3;
+                this.speedl=0.1;
+                this.color="rgb(226,17,12)";
+            }
+            fire.prototype={
+                draw:function(){
+                    cobj.save();
+                    cobj.beginPath();
+                    cobj.translate(this.x,this.y);
+                    cobj.globalCompositeOperation="lighter";
+                    cobj.fillStyle=this.color;
+                    cobj.arc(0,0,this.r,0,2*Math.PI);
+                    cobj.fill();
+                    cobj.restore();
+                },
+                update:function(){
+                    this.x+=6*Math.random()-3;
+                    this.y-=this.speedy;
+                    this.life-=this.speedl;
+                    this.r-=this.speedr;
+                }
+            }
+            var arr=[];
+            setInterval(function(){
+                cobj.clearRect(0,0,600,600);
+                arr.push(new fire());
+                for(var i=0;i<arr.length;i++){
+                    arr[i].draw();
+                    arr[i].update();
+                    if(arr[i].r<0||arr[i].life<0){
+                        arr[i]=new fire();
+                    }
+                }
+                if(arr.length>100){
+                    arr.shift();
+                }
+            },50)
+
+
+//            cobj.beginPath();
+//            cobj.moveTo(0,100);
+//            cobj.quadraticCurveTo(50,50,100,100);
+//            cobj.quadraticCurveTo(150,150,200,100);
+//            cobj.stroke();
+
+
+        }
+    </script>
+</head>
+<body>
+<canvas width="600" height="600">
+</canvas>
+
+<!--
+    矩形碰撞
+-->
+</body>
+</html>
